@@ -22,7 +22,7 @@ Estos datos fueron utilizados para identificar el conjunto de genes diferencialm
 
 ### Código de los datos: GSE92926
 
-### Repositorio en GitHub: https://github.com/alcastaro/PEC-1---Omics
+### Repositorio en GitHub: https://github.com/alcastaro/test_omics
 
 ## Contexto
 
@@ -64,7 +64,7 @@ Para proceder con el estudio se descargaron 12 archivos .cel provenientes del es
 ###Definiendo los grupos###
 set.target=as.data.frame(matrix(0,nrow=12,ncol=5))
 colnames(set.target)=c("FileName","Group","Genotype","AD","ShortName")
-lista=list.files("./data")[2:13]
+lista=list.files("./data")[1:12]
 set.target[,1]=lista
 set.target[,3]=c(rep("APPNL",6),rep("3xTg",6))
 set.target[,4]=rep(c(rep("KO",3),rep("WT",3)),2)
@@ -103,7 +103,7 @@ head(rawData)
 
 ###Análisis de calidad de los datos###
 library(arrayQualityMetrics)
-arrayQualityMetrics(rawData)
+arrayQualityMetrics(rawData,  outdir = file.path("./results", "QCDir.Raw"), force=TRUE)
 ```
 Los resultados muestran que hay tres bases de datos marcadas con problemas, específicamente la 3 y la 12 presentan las mayores deficiencias en cuanto a calidad, por lo que se podría discutir su exclusión del estudio.
 
