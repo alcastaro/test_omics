@@ -1,0 +1,1110 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={PEC 1 - Datos Ómicos - ACA},
+  pdfauthor={Alberto Castillo Aroca},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{PEC 1 - Datos Ómicos - ACA}
+\author{Alberto Castillo Aroca}
+\date{1/5/2020}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{abstract}{%
+\subsection{Abstract}\label{abstract}}
+
+En este estudio se tomó una muestra de 12 ratones machos de las especies
+AppNLG-F/NL-G-F y 3xTg-AD-H, en sus versiones transgénicas y salvajes de
+entre 7 meses y 1 año de edad, publicadas por Nakabeppu \& Castillo
+(2017). Se destaca que las versiones transgénicas cuentan con mutaciones
+patogénicas que producen una amiloidosis agresiva y genes humanos
+sobreexpresados que generan Alzheimer en los ratones.
+
+Estos datos fueron utilizados para identificar el conjunto de genes
+diferencialmente expresados entre las versiones mutantes y de control de
+cada una de las especies.
+
+\hypertarget{cuxf3digo-de-los-datos-gse92926}{%
+\subsubsection{Código de los datos:
+GSE92926}\label{cuxf3digo-de-los-datos-gse92926}}
+
+\hypertarget{repositorio-en-github-httpsgithub.comalcastarotest_omics}{%
+\subsubsection{\texorpdfstring{Repositorio en GitHub:
+\url{https://github.com/alcastaro/test_omics}}{Repositorio en GitHub: https://github.com/alcastaro/test\_omics}}\label{repositorio-en-github-httpsgithub.comalcastarotest_omics}}
+
+\hypertarget{contexto}{%
+\subsection{Contexto}\label{contexto}}
+
+El Alzheimer es la enfermedad neurodegenerativa más frecuente del
+planeta. Tan solo en Europa, esta enfermedad tiene una prevalencia del
+5.05\%, afectando mayoritariamente a las mujeres (7.13\%). En este
+contexto, se prevé un incremento progresivo en la incidencia de esta
+enfermedad como consecuencia del envejecimiento poblacional de este
+continente.
+
+En este contexto, resulta relevante identificar las condiciones
+genéticas que producen esta enfermedad, así como los procesos biológicos
+ligados al incremento de la probabilidad de sufrirla.
+
+\hypertarget{objetivos}{%
+\subsection{Objetivos}\label{objetivos}}
+
+El objetivo general del estudio de Nakabeppu \& Castillo (2017) fue
+clarificar las patologías Abeta, por medio de la comparación de los
+genes C4a/C4b, Cd74, Ctss, Gfap, Nfe2l2, Phyhd1, S100b, Tf, Tgfbr2, y
+Vim que fueron alterados en las versiones AppNLG-F/NL-G-F y por otra
+parte las versiones 3xTg-AD-H contienen genes correspondientes a las
+versiones humanas que comunmente están correlacionados con enfermedades
+neurodegenerativas.
+
+Cabe destacar que los ratones AppNLG-F/NL-G-F también tienen alteradas
+las expresiones los genes Abi3, Apoe, Bin2, Cd33, Ctsc, Dock2, Fcer1g,
+Frmd6, Hck, Inpp5D, Ly86, Plcg2, Trem2, Tyrobp.
+
+El objetivo del presente estudio es identificar los genes
+diferencialmente expresados con los datos disponibles de las versiones
+transgénicas y salvajes de ratones, con el fin de aportar insumos para
+el análisis de los procesos biológicos relacionados a la incidencia del
+Alzheimer.
+
+\hypertarget{metodologuxeda}{%
+\subsection{Metodología}\label{metodologuxeda}}
+
+\hypertarget{naturaleza-de-los-datos}{%
+\subsubsection{Naturaleza de los datos}\label{naturaleza-de-los-datos}}
+
+Tanto el estudio original como el presente son comparaciones de grupos
+donde el principal factor de análisis es el padecimiento de Alzheimer.
+Para esto se utilizaron microarrays de un solo color usando Affymetrix
+Mouse Gene 2.0 ST platform.
+
+\hypertarget{muxe9todos-utilizados}{%
+\subsubsection{Métodos utilizados}\label{muxe9todos-utilizados}}
+
+Para el presente estudio se utilizó un flujo de trabajo tradicional. En
+primer lugar se realizó una exploración de los datos con el fin de
+evaluar la calidad de las bases de datos.
+
+Concretamente se identificó la necesidad de normalizar los datos, puesto
+que se contó con un nada despreciable ruido de fondo. Esto motivó la
+normalización de las bases con el método Robust Multichip Analysis de
+Irizarry et al.~(2003)
+
+A continuación se realizó un control de calidad de los datos
+normalizados, para proceder a realizar la detección de Batch por medio
+de Combat and Principal variation component analysis (PVCA), con lo cual
+se pudo determinar que el principal motivo de variabilidad fueron los
+residuos y el genotipo.
+
+Posteriormente se realizó una identificación y filtrado de los genes más
+variables, ya que estos son los de mayor interés para el estudio. Esto
+dio paso a la utilización del paquete limma para seleccionar los genes
+diferencialmente expresados.
+
+Finalmente se obtuvieron las anotaciones de los genes identificados y se
+realizaron diversas comparaciones múltiples para obtener indicios sobre
+la significancia biológica de estos y su funcionalidad en la prevalencia
+del Alzheimer.
+
+Cabe destacar que la descripción detallada del input y output de cada
+paso se abordan con mayor detalle en el siguiente apartado.
+
+\hypertarget{resultados}{%
+\subsection{Resultados}\label{resultados}}
+
+\hypertarget{identificaciuxf3n-de-grupos}{%
+\subsubsection{Identificación de
+grupos}\label{identificaciuxf3n-de-grupos}}
+
+Para proceder con el estudio se descargaron 12 archivos .cel
+provenientes del estudio de Nakabeppu \& Castillo (2017). Estos fueron
+categorizados de acuerdo con el grupo y el genotipo al cual pertenecen y
+se estableció un nombre corto para estos, como se puede observar en la
+siguiente tabla:
+
+\begin{verbatim}
+##                                     FileName    Group Genotype AD ShortName
+## 1  GSM2440481_APPNL-G-F_1_MoGene-2_0-st_.CEL APPNL.KO    APPNL KO  APPNL.KO
+## 2  GSM2440482_APPNL-G-F_2_MoGene-2_0-st_.CEL APPNL.KO    APPNL KO  APPNL.KO
+## 3  GSM2440483_APPNL-G-F_3_MoGene-2_0-st_.CEL APPNL.KO    APPNL KO  APPNL.KO
+## 4       GSM2440484_APPWT_1_MoGene-2_0-st.CEL APPNL.WT    APPNL WT  APPNL.WT
+## 5       GSM2440485_APPWT_2_MoGene-2_0-st.CEL APPNL.WT    APPNL WT  APPNL.WT
+## 6       GSM2440486_APPWT_3_MoGene-2_0-st.CEL APPNL.WT    APPNL WT  APPNL.WT
+## 7  GSM2440487_3xTg-AD-H_1_MoGene-2_0-st_.CEL  3xTg.KO     3xTg KO   3xTg.KO
+## 8  GSM2440488_3xTg-AD-H_2_MoGene-2_0-st_.CEL  3xTg.KO     3xTg KO   3xTg.KO
+## 9  GSM2440489_3xTg-AD-H_3_MoGene-2_0-st_.CEL  3xTg.KO     3xTg KO   3xTg.KO
+## 10    GSM2440490_non-Tg_1_MoGene-2_0-st_.CEL  3xTg.WT     3xTg WT   3xTg.WT
+## 11    GSM2440491_non-Tg_2_MoGene-2_0-st_.CEL  3xTg.WT     3xTg WT   3xTg.WT
+## 12    GSM2440492_non-Tg_3_MoGene-2_0-st_.CEL  3xTg.WT     3xTg WT   3xTg.WT
+\end{verbatim}
+
+Posteriormente se leyeron los archivos .cel y se realizó un primer
+análisis sobre la calidad de los datos con el paquete
+arrayQualityMetrics de Bioconductor.
+
+\hypertarget{anuxe1lisis-de-calidad}{%
+\subsubsection{Análisis de calidad}\label{anuxe1lisis-de-calidad}}
+
+Los resultados muestran que hay tres bases de datos marcadas con
+problemas, específicamente la 3 y la 12 presentan las mayores
+deficiencias en cuanto a calidad, por lo que se podría discutir su
+exclusión del estudio.
+
+\includegraphics[width=10.26in]{figures/Figura1}
+
+Sin embargo, se procederá a realizar un análisis a mayor profundidad con
+una función creada específicamente para este tipo de datos, por medio
+del análisis de componentes principales (ACP). Con esta función (ver
+anexos) se procedió a calcular la primera y segunda componente y
+graficarlas para observar cómo se comportan los datos.
+
+En primer lugar se observa que la primera componente explica el 50\% de
+la varianza, sin embargo, se evidencia que ni esta ni la segunda
+componente logran discriminar a las dos especies de ratones de una forma
+eficiente. Así mismo, no se observa una clara diferenciación de los
+individuos con mutaciones y los salvajes.
+
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/PCA raw data-1.pdf}
+
+Así mismo, en los gráficos de cajas se evidencia que existen diferencias
+apreciables en la intensidad de los datos. Esto sugiere la necesidad de
+normalizarlos.
+
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/Boxplot raw data-1.pdf}
+
+\hypertarget{normalizaciuxf3n-y-anuxe1lisis-de-calidad}{%
+\subsubsection{Normalización y análisis de
+calidad}\label{normalizaciuxf3n-y-anuxe1lisis-de-calidad}}
+
+Para normalizar los datos se utilizó el Robust Multichip Analysis de
+Irizarry et al.~(2003), con lo cual se pudo eliminar la variabilidad de
+los datos que proceden de fuentes no biológicas como las provenientes de
+aspectos técnicos propios del análisis. De este modo también se logra
+eliminar ruido de fondo y obtener resultados más claros.
+
+Tras la normalización de los datos, se observa que todas las bases pasan
+el análisis de calidad, por lo cual se confirma su idoneidad para el
+estudio.
+
+\includegraphics[width=17.51in]{figures/Figura2}
+
+Por otra parte se evidencia que el Análisis de Componentes Principales
+ha cambiado, en este las primeras dos componentes explican el 13.4\% y
+el 11.8\% respectivamente. Sin embargo, el mayor cambio es que se logra
+identificar una clara diferenciación de las especies de ratones y una
+ligera discriminación de los que padecen Alzheimer y los sanos.
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/PCA Normalizado-1.pdf}
+
+En este orden de ideas, los gráficos de caja también demuestran que se
+ha podido eliminar el ruido de fondo y que los datos son comparables al
+tener intensidades equivalentes.
+
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/Box plot normalizado-1.pdf}
+
+\hypertarget{batch-detection}{%
+\subsubsection{Batch Detection}\label{batch-detection}}
+
+Continuando con el análisis, se utilizó el Combat and Principal
+variation component analysis (PVCA) para identificar fuentes de
+variación de origen técnico, como las diferencias en fechas de
+procesamiento e instrumentos.
+
+Los resultados demuestran que la mayor variabilidad procede de los
+residuos, seguido del genotipo de los ratones y la interacción Genotipo
+y padecimiento de Alzheimer.
+
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/Estimación de variabilidad-1.pdf}
+
+\hypertarget{identificaciuxf3n-de-genes-con-mayor-variabilidad}{%
+\subsubsection{Identificación de genes con mayor
+variabilidad}\label{identificaciuxf3n-de-genes-con-mayor-variabilidad}}
+
+Con el fin de optimizar el análisis, se procedió a identificar los genes
+con mayor variabilidad y a filtrar los datos. De este modo, se retiraron
+los genes que se mantuvieron relativamente constantes y que no estarían
+diferencialmente expresados.
+
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/Niveles de variación estándar-1.pdf}
+
+\hypertarget{filtrado-de-los-genes-con-mayor-variabilidad}{%
+\subsubsection{Filtrado de los genes con mayor
+variabilidad}\label{filtrado-de-los-genes-con-mayor-variabilidad}}
+
+Los resultados permiten observar que 671 duplicados fueron eliminados,
+así como 17973 con baja variabilidad y otros 16710. Al finalizar el
+filtrado sólo se mantuvieron 5991 genes.
+
+\begin{verbatim}
+## $numDupsRemoved
+## [1] 671
+## 
+## $numLowVar
+## [1] 17973
+## 
+## $numRemoved.ENTREZID
+## [1] 16710
+\end{verbatim}
+
+\begin{verbatim}
+## Features 
+##    41345
+\end{verbatim}
+
+\begin{verbatim}
+## [1] "Filtered genes"
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 5991
+\end{verbatim}
+
+\hypertarget{identificaciuxf3n-de-genes-diferencialmente-expresados}{%
+\subsubsection{Identificación de genes diferencialmente
+expresados}\label{identificaciuxf3n-de-genes-diferencialmente-expresados}}
+
+Para seleccionar los genes diferencialmente expresados, se procedió a
+utilizar el paquete limma de bioconductor. Para esto se creó una matriz
+de diseño y otra de comparación. Concretamente la matriz de comparación
+establece que se analizará la diferencia en los genes entre las
+versiones mutante y salvaje de cada especie (KOvsWT.3xTg y KOvsWT.APP),
+y finalmente se realizará una comparación conjunta entre las dos
+anteriores, lo cual constituye una interacción de los datos.
+
+\begin{verbatim}
+##    A3xTg.KO A3xTg.WT APPNL.KO APPNL.WT
+## 1         0        0        1        0
+## 2         0        0        1        0
+## 3         0        0        1        0
+## 4         0        0        0        1
+## 5         0        0        0        1
+## 6         0        0        0        1
+## 7         1        0        0        0
+## 8         1        0        0        0
+## 9         1        0        0        0
+## 10        0        1        0        0
+## 11        0        1        0        0
+## 12        0        1        0        0
+## attr(,"assign")
+## [1] 1 1 1 1
+## attr(,"contrasts")
+## attr(,"contrasts")$Group
+## [1] "contr.treatment"
+\end{verbatim}
+
+\begin{verbatim}
+##           Contrasts
+## Levels     KOvsWT.3xTg KOvsWT.APP INT
+##   A3xTg.KO           1          0   1
+##   A3xTg.WT          -1          0  -1
+##   APPNL.KO           0          1  -1
+##   APPNL.WT           0         -1   1
+\end{verbatim}
+
+Con estas matrices se procedió a estimar un modelo lineal para
+identificar los genes diferencialmente expresados y calcularon top
+tables de cada comparación, como se puede apreciar en el script adjunto.
+
+De acuerdo con este script se utilizan los genes filtrados, las matrices
+de diseño y comparación para obtener estimaciones sobre la diferencia de
+expresión de estos genes y obtener p-valores ajustados por medio del
+False Discovery Rate. El resultado, son tablas con el Fold-Change,
+pruebas t y los p-valores mencionados.
+
+Con estos datos se puede discriminar los genes que realmente están
+diferencialmente expresados.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{##Modelo lineal}
+\KeywordTok{library}\NormalTok{(limma)}
+\NormalTok{fit<-}\KeywordTok{lmFit}\NormalTok{(eset_filtered, designMat)}
+\NormalTok{fit.main<-}\KeywordTok{contrasts.fit}\NormalTok{(fit, cont.matrix)}
+\NormalTok{fit.main<-}\KeywordTok{eBayes}\NormalTok{(fit.main)}
+
+
+\CommentTok{##Top Tab A3xTg.KO-A3xTg.WT - Efecto Especie 3xTg}
+\NormalTok{topTab_KOvsWT}\FloatTok{.3}\NormalTok{xTg <-}\StringTok{ }\KeywordTok{topTable}\NormalTok{ (fit.main, }\DataTypeTok{number=}\KeywordTok{nrow}\NormalTok{(fit.main), }\DataTypeTok{coef=}\StringTok{"KOvsWT.3xTg"}\NormalTok{, }\DataTypeTok{adjust=}\StringTok{"fdr"}\NormalTok{) }
+
+
+\CommentTok{##Top Tab APPNL.KO-APPNL.WT - Efecto Especie APPNL}
+\NormalTok{topTab_KOvsWT.APP <-}\StringTok{ }\KeywordTok{topTable}\NormalTok{ (fit.main, }\DataTypeTok{number=}\KeywordTok{nrow}\NormalTok{(fit.main), }\DataTypeTok{coef=}\StringTok{"KOvsWT.APP"}\NormalTok{, }\DataTypeTok{adjust=}\StringTok{"fdr"}\NormalTok{) }
+
+
+\CommentTok{##Top Tab (A3xTg.KO-A3xTg.WT) - (APPNL.KO-APPNL.WT) - Efecto interacción}
+\NormalTok{topTab_INT  <-}\StringTok{ }\KeywordTok{topTable}\NormalTok{ (fit.main, }\DataTypeTok{number=}\KeywordTok{nrow}\NormalTok{(fit.main), }\DataTypeTok{coef=}\StringTok{"INT"}\NormalTok{, }\DataTypeTok{adjust=}\StringTok{"fdr"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{print}\NormalTok{(}\KeywordTok{head}\NormalTok{(topTab_INT))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##              logFC  AveExpr          t      P.Value    adj.P.Val         B
+## 17266967 -3.151477 5.942125 -14.027454 6.796544e-10 3.934912e-06 11.754695
+## 17471541 -3.151814 5.550521 -13.366541 1.313608e-09 3.934912e-06 11.275355
+## 17233226 -2.795399 5.315233  -8.777863 3.230895e-07 3.934743e-04  6.812324
+## 17343918 -1.896725 7.036292  -8.721349 3.501156e-07 3.934743e-04  6.742092
+## 17483615 -2.061306 5.524614  -8.640570 3.929665e-07 3.934743e-04  6.640940
+## 17280184 -2.631225 7.257245  -8.638623 3.940654e-07 3.934743e-04  6.638490
+\end{verbatim}
+
+Posteriormente se procedió a obtener la anotación de los resultados,
+para identificar el nombre real de los genes seleccionados y de este
+modo tener información más amplia de cada probeid.
+
+\hypertarget{ejemplo-de-los-datos}{%
+\paragraph{Ejemplo de los datos}\label{ejemplo-de-los-datos}}
+
+\begin{verbatim}
+##    PROBEID SYMBOL ENTREZID                                 GENENAME
+## 1 17211286   Ly96    17087                    lymphocyte antigen 96
+## 2 17211347 Tfap2b    21419           transcription factor AP-2 beta
+## 3 17211382  Efhc1    71877 EF-hand domain (C-terminal) containing 1
+## 4 17211416 Khdc1a   368204                  KH domain containing 1A
+## 5 17211429 Khdc1b    98582                  KH domain containing 1B
+\end{verbatim}
+
+A continuación se realizó un gráfico de volcan para observar la
+expresión diferencial de estos genes. Cabe destacar que este tipo de
+gráfico realiza una comparación del logaritmo del Fold Change y el
+logaritmo negativo del p-valor ajustado. De este modo se puede observar
+la proporción de genes diferencialmente expresados y con un alto Fold
+Change.
+
+\begin{verbatim}
+## 'select()' returned 1:1 mapping between keys and columns
+\end{verbatim}
+
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/Volcano Plot-1.pdf}
+
+El gráfico demuestra que en efecto existen genes diferencialmente
+expresados, destacándose G530011O, Zfp125903025P, entre otros. No
+obstante, con el fin de identificar cuáles fueron seleccionados de cada
+especie, se realizó una comparación múltiple que permitió contabilizar
+la cantidad de genes subexpresados y sobreexpresados. Para esto fue
+utilizado el modelo lineal del apartado anterior, distinguiendo los
+genes con un p-valor ajustado inferior a 0.1.
+
+Los datos demuestran que para los ratones 3xTg hubo 14 genes
+subexpresados y 5 sobreexpresados, mientras que para los APP hubo 1
+subexpresado y 29 sobreexpresados. Por otra parte, la interacción entre
+ambos resultados permitió distinguir 36 genes subexpresados y 6
+sobreexpresados.
+
+Se debe recordar que los ratones de la especie 3xtg poseen genes
+equiparables a los de los humanos con enfermedades neurodegenerativas.
+En consecuencia, se puede inferir que una baja expresividad de estos
+genes estarían generando Alzheimer. Por otra parte para los ratones
+AppNLG-F/NL-G-F se evidencia que la mayoría de los genes están
+sobreexpresados, lo cual concuerda con el estudio de Nakabeppu \&
+Castillo (2017), según el cual una amiloidosis agresiva se encuentra
+relacionada con el padecimiento de Alzheimer y otras enfermedades
+neuronales.
+
+\begin{verbatim}
+##        KOvsWT.3xTg KOvsWT.APP  INT
+## Down            14          1   36
+## NotSig        5972       5961 5949
+## Up               5         29    6
+\end{verbatim}
+
+Resulta interesante observar el diagrama de Venn de los resultados
+anteriores. Según este, se observa que las dos versiones de ratones no
+comparten genes diferencialmente expresados directamente, lo cual se
+puede explicar por sus diferencias de genotipo. Sin embargo, se
+evidencia que en la interacción es donde se presenta la mayor cantidad
+de genes con 42.
+
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/Diagrama Venn-1.pdf}
+
+Adicionalmente, para observar la relación entre estos genes, se procedió
+a construir un heatmap jerarquizado. Los resultados demuestran que a
+grandes razgos se pueden diferenciar 4 grupos de genes, con similitudes
+en su comportamiento y anotación.
+
+No obstante, cabe destacar que la interpretación biológica de este
+resultado queda por fuera del presente informe técnico.
+
+\begin{verbatim}
+## 'select()' returned 1:1 mapping between keys and columns
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'gplots'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:IRanges':
+## 
+##     space
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:S4Vectors':
+## 
+##     space
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:stats':
+## 
+##     lowess
+\end{verbatim}
+
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/Heatmap-1.pdf}
+
+\hypertarget{significancia-bioluxf3gica}{%
+\subsubsection{Significancia
+biológica}\label{significancia-bioluxf3gica}}
+
+Tras los análisis anteriores, se avanzó un ejercicio de caraterización
+de los procesos biológicos y las funciones que generalmente desempeñan
+los genes en cuestión. No obstante, para manejar una visión más amplia,
+se seleccionaron todos los genes con u p-valor ajustado inferior a 0.15,
+lo cual permitió contar con más datos para identificar estos procesos.
+
+En este análisis se utilizaron las 3 top tables generadas anteriormente
+y se realizó una anotación del EntrezID.
+
+\begin{verbatim}
+## 'select()' returned 1:1 mapping between keys and columns
+## 'select()' returned 1:1 mapping between keys and columns
+## 'select()' returned 1:1 mapping between keys and columns
+\end{verbatim}
+
+\begin{verbatim}
+## KOvsWT.3xTg  KOvsWT.APP         INT 
+##          80         127          71
+\end{verbatim}
+
+Como se puede observar, el resultado se elevó a 80 genes de los ratones
+3xTg, 127 de los APP y 71 en la interacción. En cambio, a continuación
+se presentan los resultados del enrichment pathway con los cuales están
+asociados los genes.
+
+En primer lugar se observa que las versiones de ratón 3xTg tienen 15
+pathways, entre los que se destacan: Map kinases, interleukin-17
+signaling, map kinase activation, entre otras.
+
+En segundo lugar, se evidencia que los ratones APP, tienen menos
+pathways, apenas 3, entre los que se destacan: traffiking and processing
+of endorsal TLR, toll like recpetor cascades y ROS and RNS production in
+phagocytes.
+
+Cabe destacar que los gráficos de red y de cajas ilustran las
+comparaciones entre las versiones mutantes y normales de los ratones y
+que por lo tanto estos procesos biológicos estarían relacionados a estas
+diferencias y por ende al padecimiento de Alzheimer, sin embargo, el
+análisis a profundidad de sus implicaciones debe ser llevado a cabo por
+profesionales de Genética y Biología.
+
+\begin{verbatim}
+## 
+\end{verbatim}
+
+\begin{verbatim}
+## ReactomePA v1.32.0  For help: https://guangchuangyu.github.io/ReactomePA
+## 
+## If you use ReactomePA in published research, please cite:
+## Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems 2016, 12(2):477-479
+\end{verbatim}
+
+\begin{verbatim}
+## ##########################
+## Comparison:  KOvsWT.3xTg 
+##                          ID
+## R-MMU-450282   R-MMU-450282
+## R-MMU-448424   R-MMU-448424
+## R-MMU-450294   R-MMU-450294
+## R-MMU-202670   R-MMU-202670
+## R-MMU-168164   R-MMU-168164
+## R-MMU-9018677 R-MMU-9018677
+##                                                        Description GeneRatio
+## R-MMU-450282  MAPK targets/ Nuclear events mediated by MAP kinases      3/25
+## R-MMU-448424                              Interleukin-17 signaling      3/25
+## R-MMU-450294                                 MAP kinase activation      3/25
+## R-MMU-202670                                  ERKs are inactivated      2/25
+## R-MMU-168164                   Toll Like Receptor 3 (TLR3) Cascade      3/25
+## R-MMU-9018677                     Biosynthesis of DHA-derived SPMs      2/25
+##               BgRatio       pvalue    p.adjust      qvalue          geneID
+## R-MMU-450282  28/8772 6.391982e-05 0.007031180 0.004911733 Fos/Dusp6/Dusp4
+## R-MMU-448424  55/8772 4.865400e-04 0.008117422 0.005670543 Fos/Dusp6/Dusp4
+## R-MMU-450294  55/8772 4.865400e-04 0.008117422 0.005670543 Fos/Dusp6/Dusp4
+## R-MMU-202670  13/8772 5.966834e-04 0.008117422 0.005670543     Dusp6/Dusp4
+## R-MMU-168164  68/8772 9.069920e-04 0.008117422 0.005670543 Fos/Dusp6/Dusp4
+## R-MMU-9018677 16/8772 9.131757e-04 0.008117422 0.005670543      Hpgd/Ptgs2
+##               Count
+## R-MMU-450282      3
+## R-MMU-448424      3
+## R-MMU-450294      3
+## R-MMU-202670      2
+## R-MMU-168164      3
+## R-MMU-9018677     2
+\end{verbatim}
+
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/resultado significancia-1.pdf}
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/resultado significancia-2.pdf}
+
+\begin{verbatim}
+## ##########################
+## Comparison:  KOvsWT.APP 
+##                          ID                                 Description
+## R-MMU-1679131 R-MMU-1679131 Trafficking and processing of endosomal TLR
+## R-MMU-168898   R-MMU-168898                 Toll-like Receptor Cascades
+## R-MMU-1222556 R-MMU-1222556        ROS and RNS production in phagocytes
+##               GeneRatio  BgRatio       pvalue   p.adjust     qvalue
+## R-MMU-1679131      3/78  12/8772 0.0001404609 0.01561519 0.01402508
+## R-MMU-168898       7/78 133/8772 0.0001697303 0.01561519 0.01402508
+## R-MMU-1222556      4/78  36/8772 0.0002745664 0.01684007 0.01512524
+##                                               geneID Count
+## R-MMU-1679131                      Ctss/Tlr7/Unc93b1     3
+## R-MMU-168898  Ly86/Ctss/Cd180/Itgb2/Tlr7/Fos/Unc93b1     7
+## R-MMU-1222556             Atp6v0d2/Cybb/Slc11a1/Ncf2     4
+\end{verbatim}
+
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/resultado significancia-3.pdf}
+\includegraphics{Informe_PEC_1_ACA_files/figure-latex/resultado significancia-4.pdf}
+
+\hypertarget{limitaciones-del-estudio}{%
+\subsection{Limitaciones del estudio}\label{limitaciones-del-estudio}}
+
+Se destaca que en el presente estudio se hizo uso de datos existentes,
+compartidos en GEO. Este hecho limita las posibilidades de la
+investigación, en el sentido de que el experimiento ya fue diseñado y
+por lo tanto, el análisis se ve forzado a trabajar con la información
+disponible.
+
+No obstante, se evidencia que los datos presentaron una buena calidad.
+
+\hypertarget{conclusiones}{%
+\subsection{Conclusiones}\label{conclusiones}}
+
+Se debe recordar que los ratones de la especie 3xtg poseen genes
+equiparables a los de los humanos con enfermedades neurodegenerativas.
+En consecuencia, se puede inferir que una baja expresividad de estos
+genes estarían generando Alzheimer. Por otra parte, para los ratos
+AppNLG-F/NL-G-F se evidencia que la mayoría de los genes están
+sobreexpresados, lo cual concuerda con el estudio de Nakabeppu \&
+Castillo (2017), según el cual una amiloidosis agresiva se encuentra
+relacionada con el padecimiento de Alzheimer y otras enfermedades
+neuronales.
+
+Por otra parte, se destaca que conclusiones de mayor profundidad serían
+aportadas por un equipo de biólogos y genetistas que trabajarían con
+base en el análisis bioinformático realizado.
+
+\hypertarget{referencias}{%
+\subsection{Referencias}\label{referencias}}
+
+\begin{itemize}
+\tightlist
+\item
+  Castillo, E., Leon, J., Mazzei, G. et al.~Comparative profiling of
+  cortical gene expression in Alzheimer's disease patients and mouse
+  models demonstrates a link between amyloidosis and neuroinflammation.
+  Sci Rep 7, 17762 (2017).
+  \url{https://doi.org/10.1038/s41598-017-17999-3}
+\end{itemize}
+
+\hypertarget{anexos}{%
+\subsection{Anexos}\label{anexos}}
+
+\hypertarget{cuxf3digo-en-r}{%
+\subsubsection{Código en R}\label{cuxf3digo-en-r}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{### -- Definiendo el directorio }\AlertTok{###}
+\CommentTok{#Estudio seleccionado}
+\CommentTok{#GSE92926}
+
+\CommentTok{#Comparative profiling of cortical gene expression in Alzheimer's }
+\CommentTok{#disease patients and mouse models demonstrates a link between amyloidosis }
+\CommentTok{#and neuroinflammation}
+
+\KeywordTok{setwd}\NormalTok{(}\StringTok{"C:/Users/Alberto Castillo/Google Drive/Academico/Máster/2019-3/Análisis de datos ómicos/PEC 1 - Omics"}\NormalTok{)}
+
+\CommentTok{##Estableciendo Knitr}
+\KeywordTok{library}\NormalTok{(knitr)}
+\NormalTok{knitr}\OperatorTok{::}\NormalTok{opts_chunk}\OperatorTok{$}\KeywordTok{set}\NormalTok{(}\DataTypeTok{echo =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{message =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{warning =} \OtherTok{FALSE}\NormalTok{, }
+                      \DataTypeTok{comment =} \OtherTok{NA}\NormalTok{, }\DataTypeTok{prompt =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{tidy =} \OtherTok{FALSE}\NormalTok{, }
+                      \DataTypeTok{fig.width =} \DecValTok{7}\NormalTok{, }\DataTypeTok{fig.height =} \DecValTok{7}\NormalTok{, }\DataTypeTok{fig_caption =} \OtherTok{TRUE}\NormalTok{,}
+                      \DataTypeTok{cache=}\OtherTok{FALSE}\NormalTok{)}
+\KeywordTok{Sys.setlocale}\NormalTok{(}\StringTok{"LC_TIME"}\NormalTok{, }\StringTok{"C"}\NormalTok{)}
+
+
+\CommentTok{##Establecinedo printr}
+\ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\NormalTok{(}\KeywordTok{require}\NormalTok{(printr))) \{}
+  \KeywordTok{install.packages}\NormalTok{(}
+    \StringTok{'printr'}\NormalTok{,}
+    \DataTypeTok{type =} \StringTok{'source'}\NormalTok{,}
+    \DataTypeTok{repos =} \KeywordTok{c}\NormalTok{(}\StringTok{'http://yihui.name/xran'}\NormalTok{, }\StringTok{'http://cran.rstudio.com'}\NormalTok{)}
+\NormalTok{  )}
+\NormalTok{\}}
+
+\CommentTok{###Definiendo los grupos###}
+\NormalTok{set.target=}\KeywordTok{as.data.frame}\NormalTok{(}\KeywordTok{matrix}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DataTypeTok{nrow=}\DecValTok{12}\NormalTok{,}\DataTypeTok{ncol=}\DecValTok{5}\NormalTok{))}
+\KeywordTok{colnames}\NormalTok{(set.target)=}\KeywordTok{c}\NormalTok{(}\StringTok{"FileName"}\NormalTok{,}\StringTok{"Group"}\NormalTok{,}\StringTok{"Genotype"}\NormalTok{,}\StringTok{"AD"}\NormalTok{,}\StringTok{"ShortName"}\NormalTok{)}
+\NormalTok{set.target}
+
+\NormalTok{set.target[,}\DecValTok{1}\NormalTok{]=}\KeywordTok{list.files}\NormalTok{(}\StringTok{"./data"}\NormalTok{)[}\OperatorTok{-}\DecValTok{1}\NormalTok{]}
+\NormalTok{set.target[,}\DecValTok{3}\NormalTok{]=}\KeywordTok{c}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\StringTok{"APPNL"}\NormalTok{,}\DecValTok{6}\NormalTok{),}\KeywordTok{rep}\NormalTok{(}\StringTok{"3xTg"}\NormalTok{,}\DecValTok{6}\NormalTok{))}
+\NormalTok{set.target[,}\DecValTok{4}\NormalTok{]=}\KeywordTok{rep}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\StringTok{"KO"}\NormalTok{,}\DecValTok{3}\NormalTok{),}\KeywordTok{rep}\NormalTok{(}\StringTok{"WT"}\NormalTok{,}\DecValTok{3}\NormalTok{)),}\DecValTok{2}\NormalTok{)}
+\NormalTok{set.target[,}\DecValTok{2}\NormalTok{]=}\KeywordTok{paste}\NormalTok{(set.target[,}\DecValTok{3}\NormalTok{],set.target[,}\DecValTok{4}\NormalTok{],}\DataTypeTok{sep =} \StringTok{"."}\NormalTok{)}
+\NormalTok{set.target[,}\DecValTok{5}\NormalTok{]=set.target[,}\DecValTok{2}\NormalTok{]}
+
+\NormalTok{targets=set.target}
+
+\KeywordTok{write.csv2}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ set.target,}\DataTypeTok{file=}\StringTok{"./data/targets.csv"}\NormalTok{)}
+
+\CommentTok{##Leyendo archivos CEL}
+\KeywordTok{library}\NormalTok{(oligo)}
+\NormalTok{celFiles <-}\StringTok{ }\KeywordTok{list.celfiles}\NormalTok{(}\StringTok{"./data"}\NormalTok{, }\DataTypeTok{full.names =} \OtherTok{TRUE}\NormalTok{)}
+\KeywordTok{library}\NormalTok{(Biobase)}
+\NormalTok{my.targets <-}\KeywordTok{read.AnnotatedDataFrame}\NormalTok{(}\KeywordTok{file.path}\NormalTok{(}\StringTok{"./data"}\NormalTok{,}\StringTok{"targets.csv"}\NormalTok{), }
+                                     \DataTypeTok{header =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{row.names =} \DecValTok{1}\NormalTok{, }
+                                     \DataTypeTok{sep=}\StringTok{";"}\NormalTok{) }
+\NormalTok{rawData <-}\StringTok{ }\KeywordTok{read.celfiles}\NormalTok{(celFiles, }\DataTypeTok{phenoData =}\NormalTok{ my.targets)}
+
+
+\CommentTok{##Cambiando los nombres}
+\NormalTok{my.targets}\OperatorTok{@}\NormalTok{data}\OperatorTok{$}\NormalTok{ShortName->}\KeywordTok{rownames}\NormalTok{(}\KeywordTok{pData}\NormalTok{(rawData))}
+\KeywordTok{colnames}\NormalTok{(rawData) <-}\KeywordTok{rownames}\NormalTok{(}\KeywordTok{pData}\NormalTok{(rawData)) }
+
+\KeywordTok{head}\NormalTok{(rawData)}
+
+
+\CommentTok{###Análisis de calidad de los datos###}
+\KeywordTok{library}\NormalTok{(arrayQualityMetrics)}
+\KeywordTok{arrayQualityMetrics}\NormalTok{(rawData)}
+
+
+\CommentTok{##Análisis de Componentes principales}
+\KeywordTok{library}\NormalTok{(ggplot2)}
+\KeywordTok{library}\NormalTok{(ggrepel)}
+\NormalTok{plotPCA3 <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{ (datos, labels, factor, title, scale,colores, }\DataTypeTok{size =} \FloatTok{1.5}\NormalTok{, }\DataTypeTok{glineas =} \FloatTok{0.25}\NormalTok{) \{}
+\NormalTok{  data <-}\StringTok{ }\KeywordTok{prcomp}\NormalTok{(}\KeywordTok{t}\NormalTok{(datos),}\DataTypeTok{scale=}\NormalTok{scale)}
+  \CommentTok{# plot adjustments}
+\NormalTok{  dataDf <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(data}\OperatorTok{$}\NormalTok{x)}
+\NormalTok{  Group <-}\StringTok{ }\NormalTok{factor}
+\NormalTok{  loads <-}\StringTok{ }\KeywordTok{round}\NormalTok{(data}\OperatorTok{$}\NormalTok{sdev}\OperatorTok{^}\DecValTok{2}\OperatorTok{/}\KeywordTok{sum}\NormalTok{(data}\OperatorTok{$}\NormalTok{sdev}\OperatorTok{^}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\DecValTok{100}\NormalTok{,}\DecValTok{1}\NormalTok{)}
+  \CommentTok{# main plot}
+\NormalTok{  p1 <-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(dataDf,}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{PC1, }\DataTypeTok{y=}\NormalTok{PC2)) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{theme_classic}\NormalTok{() }\OperatorTok{+}
+\StringTok{    }\KeywordTok{geom_hline}\NormalTok{(}\DataTypeTok{yintercept =} \DecValTok{0}\NormalTok{, }\DataTypeTok{color =} \StringTok{"gray70"}\NormalTok{) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{geom_vline}\NormalTok{(}\DataTypeTok{xintercept =} \DecValTok{0}\NormalTok{, }\DataTypeTok{color =} \StringTok{"gray70"}\NormalTok{) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{geom_point}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{color =}\NormalTok{ Group), }\DataTypeTok{alpha =} \FloatTok{0.55}\NormalTok{, }\DataTypeTok{size =} \DecValTok{3}\NormalTok{) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{coord_cartesian}\NormalTok{(}\DataTypeTok{xlim =} \KeywordTok{c}\NormalTok{(}\KeywordTok{min}\NormalTok{(data}\OperatorTok{$}\NormalTok{x[,}\DecValTok{1}\NormalTok{])}\OperatorTok{-}\DecValTok{5}\NormalTok{,}\KeywordTok{max}\NormalTok{(data}\OperatorTok{$}\NormalTok{x[,}\DecValTok{1}\NormalTok{])}\OperatorTok{+}\DecValTok{5}\NormalTok{)) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{scale_fill_discrete}\NormalTok{(}\DataTypeTok{name =} \StringTok{"Group"}\NormalTok{)}
+  \CommentTok{# avoiding labels superposition}
+\NormalTok{  p1 }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_text_repel}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{y =}\NormalTok{ PC2 }\OperatorTok{+}\StringTok{ }\FloatTok{0.25}\NormalTok{, }\DataTypeTok{label =}\NormalTok{ labels),}\DataTypeTok{segment.size =} \FloatTok{0.25}\NormalTok{, }\DataTypeTok{size =}\NormalTok{ size) }\OperatorTok{+}\StringTok{ }
+\StringTok{    }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \KeywordTok{c}\NormalTok{(}\KeywordTok{paste}\NormalTok{(}\StringTok{"PC1"}\NormalTok{,loads[}\DecValTok{1}\NormalTok{],}\StringTok{"%"}\NormalTok{)),}\DataTypeTok{y=}\KeywordTok{c}\NormalTok{(}\KeywordTok{paste}\NormalTok{(}\StringTok{"PC2"}\NormalTok{,loads[}\DecValTok{2}\NormalTok{],}\StringTok{"%"}\NormalTok{))) }\OperatorTok{+}\StringTok{  }
+\StringTok{    }\KeywordTok{ggtitle}\NormalTok{(}\KeywordTok{paste}\NormalTok{(}\StringTok{"Principal Component Analysis for: "}\NormalTok{,title,}\DataTypeTok{sep=}\StringTok{" "}\NormalTok{))}\OperatorTok{+}\StringTok{ }
+\StringTok{    }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{hjust =} \FloatTok{0.5}\NormalTok{)) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{scale_color_manual}\NormalTok{(}\DataTypeTok{values=}\NormalTok{colores)}
+\NormalTok{\}}
+
+\CommentTok{##PCA raw data}
+\KeywordTok{plotPCA3}\NormalTok{(}\KeywordTok{exprs}\NormalTok{(rawData), }\DataTypeTok{labels =}\NormalTok{ targets}\OperatorTok{$}\NormalTok{ShortName, }\DataTypeTok{factor =}\NormalTok{ targets}\OperatorTok{$}\NormalTok{Group, }
+         \DataTypeTok{title=}\StringTok{"Raw data"}\NormalTok{, }\DataTypeTok{scale =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{size =} \DecValTok{3}\NormalTok{, }
+         \DataTypeTok{colores =} \KeywordTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\StringTok{"blue"}\NormalTok{, }\StringTok{"green"}\NormalTok{, }\StringTok{"yellow"}\NormalTok{))}
+
+
+\CommentTok{##Boxplot raw data}
+\KeywordTok{boxplot}\NormalTok{(rawData, }\DataTypeTok{cex.axis=}\FloatTok{0.5}\NormalTok{, }\DataTypeTok{las=}\DecValTok{2}\NormalTok{,  }\DataTypeTok{which=}\StringTok{"all"}\NormalTok{, }
+        \DataTypeTok{col =} \KeywordTok{c}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\DecValTok{3}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\DecValTok{3}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\StringTok{"green"}\NormalTok{, }\DecValTok{3}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\StringTok{"yellow"}\NormalTok{, }\DecValTok{3}\NormalTok{)),}
+        \DataTypeTok{main=}\StringTok{"Distribution of raw intensity values"}\NormalTok{)}
+  \CommentTok{#Se observa que los boxplot presentan diferencias aprecialbes}
+  \CommentTok{#se decide normalizar la base de datos}
+
+
+
+
+\CommentTok{###Normalización###}
+\NormalTok{eset_rma <-}\StringTok{ }\KeywordTok{rma}\NormalTok{(rawData)}
+
+\CommentTok{##Análisis de calidad con datos normalizdos}
+\KeywordTok{arrayQualityMetrics}\NormalTok{(eset_rma, }\DataTypeTok{outdir =} \KeywordTok{file.path}\NormalTok{(}\StringTok{"./results"}\NormalTok{, }\StringTok{"QCDir.Norm"}\NormalTok{), }\DataTypeTok{force=}\OtherTok{TRUE}\NormalTok{)}
+
+
+\CommentTok{##PCA Normalizado}
+\KeywordTok{plotPCA3}\NormalTok{(}\KeywordTok{exprs}\NormalTok{(eset_rma), }\DataTypeTok{labels =}\NormalTok{ targets}\OperatorTok{$}\NormalTok{ShortName, }\DataTypeTok{factor =}\NormalTok{ targets}\OperatorTok{$}\NormalTok{Group, }
+         \DataTypeTok{title=}\StringTok{"Normalized data"}\NormalTok{, }\DataTypeTok{scale =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{size =} \DecValTok{3}\NormalTok{, }
+         \DataTypeTok{colores =} \KeywordTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\StringTok{"blue"}\NormalTok{, }\StringTok{"green"}\NormalTok{, }\StringTok{"yellow"}\NormalTok{))}
+
+\CommentTok{##Box plot Normalizado}
+\KeywordTok{boxplot}\NormalTok{(eset_rma, }\DataTypeTok{cex.axis=}\FloatTok{0.5}\NormalTok{, }\DataTypeTok{las=}\DecValTok{2}\NormalTok{,  }\DataTypeTok{which=}\StringTok{"all"}\NormalTok{, }
+        \DataTypeTok{col =} \KeywordTok{c}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\DecValTok{3}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\DecValTok{3}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\StringTok{"green"}\NormalTok{, }\DecValTok{3}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\StringTok{"yellow"}\NormalTok{, }\DecValTok{3}\NormalTok{)),}
+        \DataTypeTok{main=}\StringTok{"Boxplot for arrays intensity: Normalized Data"}\NormalTok{)}
+
+
+\CommentTok{###Batch Detection###}
+\KeywordTok{library}\NormalTok{(pvca)}
+\KeywordTok{pData}\NormalTok{(eset_rma) <-}\StringTok{ }\NormalTok{targets}
+\CommentTok{#selección del umbral}
+\NormalTok{pct_threshold <-}\StringTok{ }\FloatTok{0.6}
+\CommentTok{#selección de los factores a analizar}
+\NormalTok{batch.factors <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Genotype"}\NormalTok{, }\StringTok{"AD"}\NormalTok{)}
+\CommentTok{#Análisis}
+\NormalTok{pvcaObj <-}\StringTok{ }\KeywordTok{pvcaBatchAssess}\NormalTok{ (eset_rma, batch.factors, pct_threshold)}
+
+
+\CommentTok{##Fuentes de variación}
+\NormalTok{bp <-}\StringTok{ }\KeywordTok{barplot}\NormalTok{(pvcaObj}\OperatorTok{$}\NormalTok{dat, }\DataTypeTok{xlab =} \StringTok{"Effects"}\NormalTok{,}
+              \DataTypeTok{ylab =} \StringTok{"Weighted average proportion variance"}\NormalTok{,}
+              \DataTypeTok{ylim=} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\FloatTok{1.1}\NormalTok{),}\DataTypeTok{col =} \KeywordTok{c}\NormalTok{(}\StringTok{"mediumorchid"}\NormalTok{), }\DataTypeTok{las=}\DecValTok{2}\NormalTok{,}
+              \DataTypeTok{main=}\StringTok{"PVCA estimation"}\NormalTok{)}
+\KeywordTok{axis}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DataTypeTok{at =}\NormalTok{ bp, }\DataTypeTok{labels =}\NormalTok{ pvcaObj}\OperatorTok{$}\NormalTok{label, }\DataTypeTok{cex.axis =} \FloatTok{0.55}\NormalTok{, }\DataTypeTok{las=}\DecValTok{2}\NormalTok{)}
+\NormalTok{values =}\StringTok{ }\NormalTok{pvcaObj}\OperatorTok{$}\NormalTok{dat}
+\NormalTok{new_values =}\StringTok{ }\KeywordTok{round}\NormalTok{(values , }\DecValTok{3}\NormalTok{)}
+\KeywordTok{text}\NormalTok{(bp,pvcaObj}\OperatorTok{$}\NormalTok{dat,}\DataTypeTok{labels =}\NormalTok{ new_values, }\DataTypeTok{pos=}\DecValTok{3}\NormalTok{, }\DataTypeTok{cex =} \FloatTok{0.5}\NormalTok{)}
+
+
+\CommentTok{##Niveles de la variación estándar}
+\NormalTok{sds <-}\StringTok{ }\KeywordTok{apply}\NormalTok{ (}\KeywordTok{exprs}\NormalTok{(eset_rma), }\DecValTok{1}\NormalTok{, sd)}
+\NormalTok{sdsO<-}\StringTok{ }\KeywordTok{sort}\NormalTok{(sds)}
+\KeywordTok{plot}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\KeywordTok{length}\NormalTok{(sdsO), sdsO, }\DataTypeTok{main=}\StringTok{"Distribution of variability for all genes"}\NormalTok{,}
+     \DataTypeTok{sub=}\StringTok{"Vertical lines represent 90% and 95% percentiles"}\NormalTok{,}
+     \DataTypeTok{xlab=}\StringTok{"Gene index (from least to most variable)"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"Standard deviation"}\NormalTok{)}
+\KeywordTok{abline}\NormalTok{(}\DataTypeTok{v=}\KeywordTok{length}\NormalTok{(sds)}\OperatorTok{*}\KeywordTok{c}\NormalTok{(}\FloatTok{0.9}\NormalTok{,}\FloatTok{0.95}\NormalTok{))}
+
+
+
+\CommentTok{###Filtrado de datos###}
+\KeywordTok{library}\NormalTok{(genefilter)}
+\KeywordTok{library}\NormalTok{(mogene21sttranscriptcluster.db)}
+\KeywordTok{annotation}\NormalTok{(eset_rma) <-}\StringTok{ "mogene21sttranscriptcluster.db"}
+\NormalTok{filtered <-}\StringTok{ }\KeywordTok{nsFilter}\NormalTok{(eset_rma, }
+                     \DataTypeTok{require.entrez =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{remove.dupEntrez =} \OtherTok{TRUE}\NormalTok{,}
+                     \DataTypeTok{var.filter=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{var.func=}\NormalTok{IQR, }\DataTypeTok{var.cutoff=}\FloatTok{0.75}\NormalTok{, }
+                     \DataTypeTok{filterByQuantile=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{feature.exclude =} \StringTok{"^AFFX"}\NormalTok{)}
+
+
+\CommentTok{##Resultados del filtrado}
+\KeywordTok{print}\NormalTok{(filtered}\OperatorTok{$}\NormalTok{filter.log)}
+\NormalTok{eset_filtered <-filtered}\OperatorTok{$}\NormalTok{eset}
+
+\CommentTok{##Exportando los datos}
+\KeywordTok{write.csv}\NormalTok{(}\KeywordTok{exprs}\NormalTok{(eset_rma), }\DataTypeTok{file=}\StringTok{"./results/normalized.Data.csv"}\NormalTok{)}
+\KeywordTok{write.csv}\NormalTok{(}\KeywordTok{exprs}\NormalTok{(eset_filtered), }\DataTypeTok{file=}\StringTok{"./results/normalized.Filtered.Data.csv"}\NormalTok{)}
+\KeywordTok{save}\NormalTok{(eset_rma, eset_filtered, }\DataTypeTok{file=}\StringTok{"./results/normalized.Data.Rda"}\NormalTok{)}
+
+
+\CommentTok{###Identificación de genes diferencialmente expresados###}
+\CommentTok{##Diseño de la matriz}
+\KeywordTok{library}\NormalTok{(limma)}
+\NormalTok{designMat<-}\StringTok{ }\KeywordTok{model.matrix}\NormalTok{(}\OperatorTok{~}\DecValTok{0}\OperatorTok{+}\NormalTok{Group, }\KeywordTok{pData}\NormalTok{(eset_filtered))}
+\KeywordTok{colnames}\NormalTok{(designMat) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"A3xTg.KO"}\NormalTok{, }\StringTok{"A3xTg.WT"}\NormalTok{, }\StringTok{"APPNL.KO"}\NormalTok{, }\StringTok{"APPNL.WT"}\NormalTok{)}
+\KeywordTok{print}\NormalTok{(designMat)}
+
+\CommentTok{##Matriz de comparación}
+\NormalTok{cont.matrix <-}\StringTok{ }\KeywordTok{makeContrasts}\NormalTok{ (}\DataTypeTok{KOvsWT.3xTg =}\NormalTok{ A3xTg.KO}\OperatorTok{-}\NormalTok{A3xTg.WT,}
+                              \DataTypeTok{KOvsWT.APP =}\NormalTok{ APPNL.KO}\OperatorTok{-}\NormalTok{APPNL.WT,}
+                              \DataTypeTok{INT =}\NormalTok{ (A3xTg.KO}\OperatorTok{-}\NormalTok{A3xTg.WT) }\OperatorTok{-}\StringTok{ }\NormalTok{(APPNL.KO}\OperatorTok{-}\NormalTok{APPNL.WT),}
+                              \DataTypeTok{levels=}\NormalTok{designMat)}
+\KeywordTok{print}\NormalTok{(cont.matrix)}
+
+\CommentTok{##Modelo lineal}
+\KeywordTok{library}\NormalTok{(limma)}
+\NormalTok{fit<-}\KeywordTok{lmFit}\NormalTok{(eset_filtered, designMat)}
+\NormalTok{fit.main<-}\KeywordTok{contrasts.fit}\NormalTok{(fit, cont.matrix)}
+\NormalTok{fit.main<-}\KeywordTok{eBayes}\NormalTok{(fit.main)}
+\KeywordTok{class}\NormalTok{(fit.main)}
+
+\CommentTok{##Top Tab A3xTg.KO-A3xTg.WT - Efecto Especie 3xTg}
+\NormalTok{topTab_KOvsWT}\FloatTok{.3}\NormalTok{xTg <-}\StringTok{ }\KeywordTok{topTable}\NormalTok{ (fit.main, }\DataTypeTok{number=}\KeywordTok{nrow}\NormalTok{(fit.main), }\DataTypeTok{coef=}\StringTok{"KOvsWT.3xTg"}\NormalTok{, }\DataTypeTok{adjust=}\StringTok{"fdr"}\NormalTok{) }
+\KeywordTok{head}\NormalTok{(topTab_KOvsWT}\FloatTok{.3}\NormalTok{xTg)}
+
+\CommentTok{##Top Tab APPNL.KO-APPNL.WT - Efecto Especie APPNL}
+\NormalTok{topTab_KOvsWT.APP <-}\StringTok{ }\KeywordTok{topTable}\NormalTok{ (fit.main, }\DataTypeTok{number=}\KeywordTok{nrow}\NormalTok{(fit.main), }\DataTypeTok{coef=}\StringTok{"KOvsWT.APP"}\NormalTok{, }\DataTypeTok{adjust=}\StringTok{"fdr"}\NormalTok{) }
+\KeywordTok{head}\NormalTok{(topTab_KOvsWT.APP)}
+
+\CommentTok{##Top Tab (A3xTg.KO-A3xTg.WT) - (APPNL.KO-APPNL.WT) - Efecto interacción}
+\NormalTok{topTab_INT  <-}\StringTok{ }\KeywordTok{topTable}\NormalTok{ (fit.main, }\DataTypeTok{number=}\KeywordTok{nrow}\NormalTok{(fit.main), }\DataTypeTok{coef=}\StringTok{"INT"}\NormalTok{, }\DataTypeTok{adjust=}\StringTok{"fdr"}\NormalTok{) }
+\KeywordTok{head}\NormalTok{(topTab_INT)}
+
+\CommentTok{###Anotación de los resultados###}
+
+\CommentTok{##Generando la función de anotación}
+\NormalTok{annotatedTopTable <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(topTab, anotPackage)}
+\NormalTok{\{}
+\NormalTok{  topTab <-}\StringTok{ }\KeywordTok{cbind}\NormalTok{(}\DataTypeTok{PROBEID=}\KeywordTok{rownames}\NormalTok{(topTab), topTab)}
+\NormalTok{  myProbes <-}\StringTok{ }\KeywordTok{rownames}\NormalTok{(topTab)}
+\NormalTok{  thePackage <-}\StringTok{ }\KeywordTok{eval}\NormalTok{(}\KeywordTok{parse}\NormalTok{(}\DataTypeTok{text =}\NormalTok{ anotPackage))}
+\NormalTok{  geneAnots <-}\StringTok{ }\KeywordTok{select}\NormalTok{(thePackage, myProbes, }\KeywordTok{c}\NormalTok{(}\StringTok{"SYMBOL"}\NormalTok{, }\StringTok{"ENTREZID"}\NormalTok{, }\StringTok{"GENENAME"}\NormalTok{))}
+\NormalTok{  annotatedTopTab<-}\StringTok{ }\KeywordTok{merge}\NormalTok{(}\DataTypeTok{x=}\NormalTok{geneAnots, }\DataTypeTok{y=}\NormalTok{topTab, }\DataTypeTok{by.x=}\StringTok{"PROBEID"}\NormalTok{, }\DataTypeTok{by.y=}\StringTok{"PROBEID"}\NormalTok{)}
+  \KeywordTok{return}\NormalTok{(annotatedTopTab)}
+\NormalTok{\}}
+
+\CommentTok{##Anotando las tablas}
+\NormalTok{topAnnotated_KOvsWT}\FloatTok{.3}\NormalTok{xTg <-}\StringTok{ }\KeywordTok{annotatedTopTable}\NormalTok{(topTab_KOvsWT}\FloatTok{.3}\NormalTok{xTg,}
+                                              \DataTypeTok{anotPackage=}\StringTok{"mogene21sttranscriptcluster.db"}\NormalTok{)}
+\NormalTok{topAnnotated_KOvsWT.APP <-}\StringTok{ }\KeywordTok{annotatedTopTable}\NormalTok{(topTab_KOvsWT.APP,}
+                                              \DataTypeTok{anotPackage=}\StringTok{"mogene21sttranscriptcluster.db"}\NormalTok{)}
+\NormalTok{topAnnotated_INT <-}\StringTok{ }\KeywordTok{annotatedTopTable}\NormalTok{(topTab_INT,}
+                                      \DataTypeTok{anotPackage=}\StringTok{"mogene21sttranscriptcluster.db"}\NormalTok{)}
+
+\KeywordTok{write.csv}\NormalTok{(topAnnotated_KOvsWT}\FloatTok{.3}\NormalTok{xTg, }\DataTypeTok{file=}\StringTok{"./results/topAnnotated_KOvsWT.3xTg.csv"}\NormalTok{)}
+\KeywordTok{write.csv}\NormalTok{(topAnnotated_KOvsWT.APP, }\DataTypeTok{file=}\StringTok{"./results/topAnnotated_KOvsWT.APP.csv"}\NormalTok{)}
+\KeywordTok{write.csv}\NormalTok{(topAnnotated_INT, }\DataTypeTok{file=}\StringTok{"./results/topAnnotated_INT.csv"}\NormalTok{)}
+
+
+\CommentTok{##Muestra de confirmación}
+\KeywordTok{head}\NormalTok{(topAnnotated_INT[}\DecValTok{1}\OperatorTok{:}\DecValTok{5}\NormalTok{,}\DecValTok{1}\OperatorTok{:}\DecValTok{4}\NormalTok{])}
+  \CommentTok{#Se confirma que la anotación ocurrió}
+
+\CommentTok{##Gráfico de volcán}
+\KeywordTok{library}\NormalTok{(mogene21sttranscriptcluster.db)}
+\NormalTok{geneSymbols <-}\StringTok{ }\KeywordTok{select}\NormalTok{(mogene21sttranscriptcluster.db, }\KeywordTok{rownames}\NormalTok{(fit.main), }\KeywordTok{c}\NormalTok{(}\StringTok{"SYMBOL"}\NormalTok{))}
+\NormalTok{SYMBOLS<-}\StringTok{ }\NormalTok{geneSymbols}\OperatorTok{$}\NormalTok{SYMBOL}
+\KeywordTok{volcanoplot}\NormalTok{(fit.main, }\DataTypeTok{coef=}\DecValTok{1}\NormalTok{, }\DataTypeTok{highlight=}\DecValTok{8}\NormalTok{, }\DataTypeTok{names=}\NormalTok{SYMBOLS, }
+            \DataTypeTok{main=}\KeywordTok{paste}\NormalTok{(}\StringTok{"Differentially expressed genes"}\NormalTok{, }\KeywordTok{colnames}\NormalTok{(cont.matrix)[}\DecValTok{1}\NormalTok{], }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{))}
+\KeywordTok{abline}\NormalTok{(}\DataTypeTok{v=}\KeywordTok{c}\NormalTok{(}\OperatorTok{-}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{))}
+
+  \CommentTok{#Revisar función de los genes resaltados}
+
+\CommentTok{##Comparación múltiple}
+\KeywordTok{library}\NormalTok{(limma)}
+\NormalTok{res<-}\KeywordTok{decideTests}\NormalTok{(fit.main, }\DataTypeTok{method=}\StringTok{"separate"}\NormalTok{, }\DataTypeTok{adjust.method=}\StringTok{"fdr"}\NormalTok{, }\DataTypeTok{p.value=}\FloatTok{0.1}\NormalTok{, }\DataTypeTok{lfc=}\DecValTok{1}\NormalTok{)}
+
+\CommentTok{##Resumen de la comparación múltiple}
+\NormalTok{sum.res.rows<-}\KeywordTok{apply}\NormalTok{(}\KeywordTok{abs}\NormalTok{(res),}\DecValTok{1}\NormalTok{,sum)}
+\NormalTok{res.selected<-res[sum.res.rows}\OperatorTok{!=}\DecValTok{0}\NormalTok{,] }
+\KeywordTok{print}\NormalTok{(}\KeywordTok{summary}\NormalTok{(res))}
+
+
+\CommentTok{##Diagrama Venn}
+\KeywordTok{vennDiagram}\NormalTok{ (res.selected[,}\DecValTok{1}\OperatorTok{:}\DecValTok{3}\NormalTok{], }\DataTypeTok{cex=}\FloatTok{0.9}\NormalTok{)}
+\KeywordTok{title}\NormalTok{(}\StringTok{"Genes in common between the three comparisons}\CharTok{\textbackslash{}n}\StringTok{ Genes selected with FDR < 0.1 and logFC > 1"}\NormalTok{)}
+
+
+\CommentTok{##Datos para el mapa de calor}
+\NormalTok{probesInHeatmap <-}\StringTok{ }\KeywordTok{rownames}\NormalTok{(res.selected)}
+\NormalTok{HMdata <-}\StringTok{ }\KeywordTok{exprs}\NormalTok{(eset_filtered)[}\KeywordTok{rownames}\NormalTok{(}\KeywordTok{exprs}\NormalTok{(eset_filtered)) }\OperatorTok{%in%}\StringTok{ }\NormalTok{probesInHeatmap,]}
+
+\NormalTok{geneSymbols <-}\StringTok{ }\KeywordTok{select}\NormalTok{(mogene21sttranscriptcluster.db, }\KeywordTok{rownames}\NormalTok{(HMdata), }\KeywordTok{c}\NormalTok{(}\StringTok{"SYMBOL"}\NormalTok{))}
+\NormalTok{SYMBOLS<-}\StringTok{ }\NormalTok{geneSymbols}\OperatorTok{$}\NormalTok{SYMBOL}
+\KeywordTok{rownames}\NormalTok{(HMdata) <-}\StringTok{ }\NormalTok{SYMBOLS}
+\KeywordTok{write.csv}\NormalTok{(HMdata, }\DataTypeTok{file =} \KeywordTok{file.path}\NormalTok{(}\StringTok{"./results/data4Heatmap.csv"}\NormalTok{))}
+
+\NormalTok{my_palette <-}\StringTok{ }\KeywordTok{colorRampPalette}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"black"}\NormalTok{, }\StringTok{"white"}\NormalTok{))(}\DataTypeTok{n =} \DecValTok{299}\NormalTok{)}
+
+\CommentTok{##Mapa de Calor}
+\KeywordTok{library}\NormalTok{(gplots)}
+\KeywordTok{heatmap.2}\NormalTok{(HMdata,}
+          \DataTypeTok{Rowv =} \OtherTok{FALSE}\NormalTok{,}
+          \DataTypeTok{Colv =} \OtherTok{FALSE}\NormalTok{,}
+          \DataTypeTok{main =} \StringTok{"Differentially expressed genes }\CharTok{\textbackslash{}n}\StringTok{ FDR < 0,1, logFC >=1"}\NormalTok{,}
+          \DataTypeTok{scale =} \StringTok{"row"}\NormalTok{,}
+          \DataTypeTok{col =}\NormalTok{ my_palette,}
+          \DataTypeTok{sepcolor =} \StringTok{"white"}\NormalTok{,}
+          \DataTypeTok{sepwidth =} \KeywordTok{c}\NormalTok{(}\FloatTok{0.05}\NormalTok{,}\FloatTok{0.05}\NormalTok{),}
+          \DataTypeTok{cexRow =} \FloatTok{0.5}\NormalTok{,}
+          \DataTypeTok{cexCol =} \FloatTok{0.9}\NormalTok{,}
+          \DataTypeTok{key =} \OtherTok{TRUE}\NormalTok{,}
+          \DataTypeTok{keysize =} \FloatTok{1.5}\NormalTok{,}
+          \DataTypeTok{density.info =} \StringTok{"histogram"}\NormalTok{,}
+          \DataTypeTok{ColSideColors =} \KeywordTok{c}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\StringTok{"red"}\NormalTok{,}\DecValTok{3}\NormalTok{),}\KeywordTok{rep}\NormalTok{(}\StringTok{"blue"}\NormalTok{,}\DecValTok{3}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\StringTok{"green"}\NormalTok{,}\DecValTok{3}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\StringTok{"yellow"}\NormalTok{,}\DecValTok{3}\NormalTok{)),}
+          \DataTypeTok{tracecol =} \OtherTok{NULL}\NormalTok{,}
+          \DataTypeTok{dendrogram =} \StringTok{"none"}\NormalTok{,}
+          \DataTypeTok{srtCol =} \DecValTok{30}\NormalTok{)}
+
+\CommentTok{##Mapa de calor jerarquizado}
+\KeywordTok{heatmap.2}\NormalTok{(HMdata,}
+          \DataTypeTok{Rowv =} \OtherTok{TRUE}\NormalTok{,}
+          \DataTypeTok{Colv =} \OtherTok{TRUE}\NormalTok{,}
+          \DataTypeTok{dendrogram =} \StringTok{"both"}\NormalTok{,}
+          \DataTypeTok{main =} \StringTok{"Differentially expressed genes }\CharTok{\textbackslash{}n}\StringTok{ FDR < 0,1, logFC >=1"}\NormalTok{,}
+          \DataTypeTok{scale =} \StringTok{"row"}\NormalTok{,}
+          \DataTypeTok{col =}\NormalTok{ my_palette,}
+          \DataTypeTok{sepcolor =} \StringTok{"white"}\NormalTok{,}
+          \DataTypeTok{sepwidth =} \KeywordTok{c}\NormalTok{(}\FloatTok{0.05}\NormalTok{,}\FloatTok{0.05}\NormalTok{),}
+          \DataTypeTok{cexRow =} \FloatTok{0.5}\NormalTok{,}
+          \DataTypeTok{cexCol =} \FloatTok{0.9}\NormalTok{,}
+          \DataTypeTok{key =} \OtherTok{TRUE}\NormalTok{,}
+          \DataTypeTok{keysize =} \FloatTok{1.5}\NormalTok{,}
+          \DataTypeTok{density.info =} \StringTok{"histogram"}\NormalTok{,}
+          \DataTypeTok{ColSideColors =} \KeywordTok{c}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\StringTok{"red"}\NormalTok{,}\DecValTok{3}\NormalTok{),}\KeywordTok{rep}\NormalTok{(}\StringTok{"blue"}\NormalTok{,}\DecValTok{3}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\StringTok{"green"}\NormalTok{,}\DecValTok{3}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\StringTok{"yellow"}\NormalTok{,}\DecValTok{3}\NormalTok{)),}
+          \DataTypeTok{tracecol =} \OtherTok{NULL}\NormalTok{,}
+          \DataTypeTok{srtCol =} \DecValTok{30}\NormalTok{)}
+
+
+\CommentTok{###Significancia biológica###}
+\CommentTok{#Preparación de datos}
+
+\NormalTok{listOfTables <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\DataTypeTok{KOvsWT.3xTg =}\NormalTok{ topTab_KOvsWT}\FloatTok{.3}\NormalTok{xTg, }
+                     \DataTypeTok{KOvsWT.APP  =}\NormalTok{ topTab_KOvsWT.APP, }
+                     \DataTypeTok{INT =}\NormalTok{ topTab_INT)}
+\NormalTok{listOfSelected <-}\StringTok{ }\KeywordTok{list}\NormalTok{()}
+
+\CommentTok{#Error en esta parte}
+
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\KeywordTok{length}\NormalTok{(listOfTables))\{}
+  \CommentTok{# select the toptable}
+\NormalTok{  topTab <-}\StringTok{ }\NormalTok{listOfTables[[i]]}
+  \CommentTok{# select the genes to be included in the analysis}
+\NormalTok{  whichGenes<-topTab[}\StringTok{"adj.P.Val"}\NormalTok{]}\OperatorTok{<}\FloatTok{0.15}
+  \CommentTok{#selectedIDs <- (topTab)[whichGenes,1]}
+\NormalTok{  selectedIDs <-}\KeywordTok{rownames}\NormalTok{(topTab)[whichGenes]}
+  \CommentTok{# convert the ID to Entrez}
+\NormalTok{  EntrezIDs<-}\StringTok{ }\KeywordTok{select}\NormalTok{(mogene21sttranscriptcluster.db, selectedIDs, }\KeywordTok{c}\NormalTok{(}\StringTok{"ENTREZID"}\NormalTok{))}
+\NormalTok{  EntrezIDs <-}\StringTok{ }\NormalTok{EntrezIDs}\OperatorTok{$}\NormalTok{ENTREZID}
+\NormalTok{  listOfSelected[[i]] <-}\StringTok{ }\NormalTok{EntrezIDs}
+  \KeywordTok{names}\NormalTok{(listOfSelected)[i] <-}\StringTok{ }\KeywordTok{names}\NormalTok{(listOfTables)[i]}
+\NormalTok{\}}
+\KeywordTok{sapply}\NormalTok{(listOfSelected, length)}
+
+
+\CommentTok{## --------------------------------------------------------------------------------------------------}
+\NormalTok{mapped_genes2GO <-}\StringTok{ }\KeywordTok{mappedkeys}\NormalTok{(org.Mm.egGO)}
+\NormalTok{mapped_genes2KEGG <-}\StringTok{ }\KeywordTok{mappedkeys}\NormalTok{(org.Mm.egPATH)}
+\NormalTok{mapped_genes <-}\StringTok{ }\KeywordTok{union}\NormalTok{(mapped_genes2GO , mapped_genes2KEGG)}
+
+
+\CommentTok{##Señal Biológica}
+\KeywordTok{library}\NormalTok{(ReactomePA)}
+
+\NormalTok{listOfData <-}\StringTok{ }\NormalTok{listOfSelected[}\DecValTok{1}\OperatorTok{:}\DecValTok{2}\NormalTok{]}
+\NormalTok{comparisonsNames <-}\StringTok{ }\KeywordTok{names}\NormalTok{(listOfData)}
+\NormalTok{universe <-}\StringTok{ }\NormalTok{mapped_genes}
+
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\KeywordTok{length}\NormalTok{(listOfData))\{}
+\NormalTok{  genesIn <-}\StringTok{ }\NormalTok{listOfData[[i]]}
+\NormalTok{  comparison <-}\StringTok{ }\NormalTok{comparisonsNames[i]}
+\NormalTok{  enrich.result <-}\StringTok{ }\KeywordTok{enrichPathway}\NormalTok{(}\DataTypeTok{gene =}\NormalTok{ genesIn,}
+                                 \DataTypeTok{pvalueCutoff =} \FloatTok{0.05}\NormalTok{,}
+                                 \DataTypeTok{readable =}\NormalTok{ T,}
+                                 \DataTypeTok{pAdjustMethod =} \StringTok{"BH"}\NormalTok{,}
+                                 \DataTypeTok{organism =} \StringTok{"mouse"}\NormalTok{,}
+                                 \DataTypeTok{universe =}\NormalTok{ universe)}
+  
+  \KeywordTok{cat}\NormalTok{(}\StringTok{"##########################"}\NormalTok{)}
+  \KeywordTok{cat}\NormalTok{(}\StringTok{"}\CharTok{\textbackslash{}n}\StringTok{Comparison: "}\NormalTok{, comparison,}\StringTok{"}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+  \KeywordTok{print}\NormalTok{(}\KeywordTok{head}\NormalTok{(enrich.result))}
+  
+  \ControlFlowTok{if}\NormalTok{ (}\KeywordTok{length}\NormalTok{(}\KeywordTok{rownames}\NormalTok{(enrich.result}\OperatorTok{@}\NormalTok{result)) }\OperatorTok{!=}\StringTok{ }\DecValTok{0}\NormalTok{) \{}
+    \KeywordTok{write.csv}\NormalTok{(}\KeywordTok{as.data.frame}\NormalTok{(enrich.result), }
+              \DataTypeTok{file =}\KeywordTok{paste0}\NormalTok{(}\StringTok{"./results/"}\NormalTok{,}\StringTok{"ReactomePA.Results."}\NormalTok{,comparison,}\StringTok{".csv"}\NormalTok{), }
+              \DataTypeTok{row.names =} \OtherTok{FALSE}\NormalTok{)}
+    
+    \KeywordTok{print}\NormalTok{(}\KeywordTok{barplot}\NormalTok{(enrich.result, }\DataTypeTok{showCategory =} \DecValTok{15}\NormalTok{, }\DataTypeTok{font.size =} \DecValTok{4}\NormalTok{, }
+                  \DataTypeTok{title =} \KeywordTok{paste0}\NormalTok{(}\StringTok{"Reactome Pathway Analysis for "}\NormalTok{, comparison,}\StringTok{". Barplot"}\NormalTok{)))}
+    
+    \KeywordTok{print}\NormalTok{(}\KeywordTok{cnetplot}\NormalTok{(enrich.result, }\DataTypeTok{categorySize =} \StringTok{"geneNum"}\NormalTok{, }\DataTypeTok{schowCategory =} \DecValTok{15}\NormalTok{, }
+                   \DataTypeTok{vertex.label.cex =} \FloatTok{0.75}\NormalTok{))}
+    
+\NormalTok{  \}}
+\NormalTok{\}}
+
+\CommentTok{## Network obtained from the Reactome enrichment analysis on the list obtained from the comparison between KO and WT in RT}
+\KeywordTok{cnetplot}\NormalTok{(enrich.result, }\DataTypeTok{categorySize =} \StringTok{"geneNum"}\NormalTok{, }\DataTypeTok{schowCategory =} \DecValTok{15}\NormalTok{, }
+         \DataTypeTok{vertex.label.cex =} \FloatTok{0.75}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\end{document}

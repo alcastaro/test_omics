@@ -3,10 +3,11 @@ title: "PEC 1 - Datos Ómicos - ACA"
 author: "Alberto Castillo Aroca"
 date: "1/5/2020"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     toc_float: yes
-  
 ---
 
 ```{r setup, include=FALSE}
